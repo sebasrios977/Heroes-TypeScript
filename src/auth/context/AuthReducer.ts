@@ -8,7 +8,7 @@ const initialState: InitialState = {
 };
 
 interface AuthAction {
-    type: string,
+    type?: string,
     payload?: any;
 }
 
@@ -24,7 +24,6 @@ export const authReducer: Reducer<InitialState, AuthAction> = (state = initialSt
        
         case types.logout:
             return {
-                ...state,
                 logged: false,
             }
     

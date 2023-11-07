@@ -7,7 +7,7 @@ const PrivateRoute = ({children}: any) => {
     const { logged } = useContext(AuthContext);
     const {pathname, search} = useLocation();
     
-    const lastPath = pathname + search;
+    const lastPath: string = pathname + search;
     localStorage.setItem('lastpath', lastPath);
 
     if(pathname === '/heroes') {
